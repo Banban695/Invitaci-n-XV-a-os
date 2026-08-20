@@ -1,0 +1,193 @@
+﻿
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis XV Años</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============================================= -->
+    <!-- 1. CORTINA DE PRESENTACIÓN                     -->
+    <!-- ============================================= -->
+    <div id="curtain" class="curtain">
+        <div class="curtain-panel curtain-left">
+            <div class="curtain-ornament"></div>
+        </div>
+        <div class="curtain-panel curtain-right">
+            <div class="curtain-ornament"></div>
+        </div>
+
+        <div class="curtain-content">
+            <span class="monogram" id="monogram">S</span>
+            <p class="curtain-eyebrow">Mis</p>
+            <h1 class="curtain-title">XV Años</h1>
+            <p class="curtain-name" id="curtainName">Sofía</p>
+            <div class="divider"><span></span><span class="divider-dot">✦</span><span></span></div>
+            <button id="enterBtn" class="elegant-btn enter-btn">Abrir mi Invitación</button>
+        </div>
+    </div>
+
+    <!-- Botón flotante de música (visible tras entrar) -->
+    <button id="musicToggle" class="music-btn" aria-label="Reproducir o pausar música">
+        <span id="musicIcon">♪</span>
+    </button>
+    <audio id="bgMusic" loop preload="none">
+        <source src="assets/audio/background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <main id="mainContent" class="main-content">
+
+        <!-- ============================================= -->
+        <!-- 2. HERO CON IMAGEN                             -->
+        <!-- ============================================= -->
+        <section class="hero">
+            <div class="hero-frame">
+                <img src="assets/img/hero.jpg" alt="Foto principal" id="heroImg" onerror="this.parentElement.classList.add('img-missing')">
+            </div>
+
+            <p class="hero-eyebrow">¡Celebra conmigo!</p>
+            <h1 class="hero-name" id="heroName">Sofía Ramírez</h1>
+            <p class="hero-tagline">estoy cumpliendo mis <strong>XV años</strong></p>
+
+            <div class="divider"><span></span><span class="divider-dot">✦</span><span></span></div>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- 3. CONTADOR REGRESIVO                          -->
+        <!-- ============================================= -->
+        <section class="countdown-section">
+            <h2 class="section-title">Cuenta Regresiva</h2>
+            <p class="section-subtitle">Faltan solo...</p>
+
+            <div class="countdown" id="countdown">
+                <div class="countdown-block">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Días</span>
+                </div>
+                <div class="countdown-block">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Horas</span>
+                </div>
+                <div class="countdown-block">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Min</span>
+                </div>
+                <div class="countdown-block">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Seg</span>
+                </div>
+            </div>
+            <p id="countdownMessage" class="countdown-message"></p>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- 4. MENSAJE DEL CUMPLEAÑO                       -->
+        <!-- ============================================= -->
+        <section class="message-section">
+            <div class="ornate-card">
+                <span class="quote-mark">“</span>
+                <h2 class="section-title light">Un Mensaje Para Ti</h2>
+                <p class="message-text">
+                    Con muchísima ilusión llegó el día que he soñado desde niña. Quiero compartir
+                    contigo esta noche tan especial, llena de música, baile y momentos inolvidables,
+                    en la que celebraré mi transición de niña a mujer rodeada de las personas que
+                    más quiero. Tu presencia hará de este sueño una realidad todavía más bonita.
+                </p>
+                <p class="message-signature" id="messageSignature">— Sofía Ramírez</p>
+            </div>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- 5. GALERÍA DE GUSTOS                           -->
+        <!-- ============================================= -->
+        <section class="gallery-section">
+            <h2 class="section-title">Mis Gustos</h2>
+            <p class="section-subtitle">Un poco más sobre mí</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item item-1">
+                    <div class="gallery-photo">
+                        <img src="assets/img/gusto1.jpg" alt="Mi color favorito" loading="lazy" onerror="this.closest('.gallery-item').classList.add('img-missing')">
+                    </div>
+                    <span class="gallery-caption"><span class="gallery-icon">🎨</span>Mi color favorito</span>
+                </div>
+                <div class="gallery-item item-2">
+                    <div class="gallery-photo">
+                        <img src="assets/img/gusto2.jpg" alt="Mi película favorita" loading="lazy" onerror="this.closest('.gallery-item').classList.add('img-missing')">
+                    </div>
+                    <span class="gallery-caption"><span class="gallery-icon">🎬</span>Mi película favorita</span>
+                </div>
+                <div class="gallery-item item-3">
+                    <div class="gallery-photo">
+                        <img src="assets/img/gusto3.jpg" alt="Mi mascota" loading="lazy" onerror="this.closest('.gallery-item').classList.add('img-missing')">
+                    </div>
+                    <span class="gallery-caption"><span class="gallery-icon">🐾</span>Mi mascota</span>
+                </div>
+                <div class="gallery-item item-4">
+                    <div class="gallery-photo">
+                        <img src="assets/img/gusto4.jpg" alt="Con mis amigas" loading="lazy" onerror="this.closest('.gallery-item').classList.add('img-missing')">
+                    </div>
+                    <span class="gallery-caption"><span class="gallery-icon">👯</span>Con mis amigas</span>
+                </div>
+                <div class="gallery-item item-5">
+                    <div class="gallery-photo">
+                        <img src="assets/img/gusto5.jpg" alt="Mi comida favorita" loading="lazy" onerror="this.closest('.gallery-item').classList.add('img-missing')">
+                    </div>
+                    <span class="gallery-caption"><span class="gallery-icon">🍰</span>Mi comida favorita</span>
+                </div>
+                <div class="gallery-item item-6">
+                    <div class="gallery-photo">
+                        <img src="assets/img/gusto6.jpg" alt="Mi hobby favorito" loading="lazy" onerror="this.closest('.gallery-item').classList.add('img-missing')">
+                    </div>
+                    <span class="gallery-caption"><span class="gallery-icon">✨</span>Mi hobby favorito</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- 6. MAPA Y UBICACIÓN                            -->
+        <!-- ============================================= -->
+        <section class="location-section">
+            <h2 class="section-title">Ubicación del Evento</h2>
+            <p class="section-subtitle" id="locationAddress">Salón Jardín Villa Toscana, Av. de las Flores 245, CDMX</p>
+            <p class="section-subtitle location-datetime" id="locationDateTime">5 de Diciembre, 2026 · 7:00 PM</p>
+
+            <div class="map-wrapper">
+                <iframe id="mapFrame"
+                        class="map-frame"
+                        src="https://www.google.com/maps?q=Ciudad+de+M%C3%A9xico&output=embed"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <a id="mapsBtn" class="elegant-btn maps-btn" href="https://www.google.com/maps/search/?api=1&query=Ciudad+de+M%C3%A9xico" target="_blank" rel="noopener noreferrer">
+                Abrir en Google Maps
+            </a>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- 8. MENSAJE FINAL                               -->
+        <!-- ============================================= -->
+        <footer class="final-section">
+            <div class="divider light"><span></span><span class="divider-dot">✦</span><span></span></div>
+            <h2 class="final-title">Te esperamos...</h2>
+            <p class="final-subtitle">Será un honor celebrar esta noche tan especial junto a ti.</p>
+            <p class="final-hashtag" id="finalHashtag">#MisXVSofía</p>
+        </footer>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
